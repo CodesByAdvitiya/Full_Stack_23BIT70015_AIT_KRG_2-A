@@ -3,5 +3,4 @@
 | Experiment No. | Website Link |
 |----------------|--------------|
 | 1. Responsive Banking UI | [Experiment 1 Website](https://responsivebankingui.netlify.app/) |
-|----------------|--------------|
 | 2. Admin Dashboard with CSS Grid | [Experiment 2 Website](https://admindashboardwithcssgrid.netlify.app/) |
