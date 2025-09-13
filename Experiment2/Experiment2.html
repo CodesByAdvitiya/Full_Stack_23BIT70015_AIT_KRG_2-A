@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="Experiment2.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container" data-theme="light">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Panel</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><span class="material-icons-sharp">grid_view</span>Dashboard</a></li>
+                <li><a href="#"><span class="material-icons-sharp">person_outline</span>Customers</a></li>
+                <li><a href="#"><span class="material-icons-sharp">receipt_long</span>Orders</a></li>
+                <li><a href="#"><span class="material-icons-sharp">insights</span>Analytics</a></li>
+                <li><a href="#"><span class="material-icons-sharp">mail_outline</span>Messages</a></li>
+                <li><a href="#"><span class="material-icons-sharp">inventory</span>Products</a></li>
+                <li><a href="#"><span class="material-icons-sharp">report_gmailerrorred</span>Reports</a></li>
+                <li><a href="#"><span class="material-icons-sharp">settings</span>Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <header class="header">
+                <h1>Dashboard Overview</h1>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+            </header>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h3>New Orders</h3>
+                    <br>
+                    <p>5012</p>
+                    <small>Last 24 Hours</small>
+                </div>
+                <div class="card">
+                    <h3>Bounce Rate</h3>
+                    <br>
+                    <p>20%</p>
+                    <small>Last 24 Hours</small>
+                </div>
+                <div class="card">
+                    <h3>User Registrations</h3>
+                    <br>
+                    <p>56</p>
+                    <small>Last 24 Hours</small>
+                </div>
+                <div class="card data-visualization">
+                    <h2>Sales Chart</h2>
+                    <p>Chart will be rendered here.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="Experiment2.js"></script>
+</body>
+</html>

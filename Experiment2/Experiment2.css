@@ -1,0 +1,175 @@
+/* --- Base Styles & Variables --- */
+:root {
+  --clr-primary: #7380ec;
+  --clr-white: #ffffff;
+  --clr-light: #f8f9fa;
+  --clr-dark: #363949;
+  --clr-black: #202020; /* Black for cards */
+  --clr-gray-dark: #181a1e; /* Gray for main background */
+  --clr-purple-light: #a3a1f7; /* Light purple for sidebar text */
+  --clr-purple-tint: #e1e0ff; /* Purple tint for card text */
+
+  --clr-bg-light: #f6f6f9;
+  --clr-text-light: #363949;
+  --clr-sidebar-bg-light: #ffffff;
+
+  --card-padding: 1.8rem;
+  --box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  --transition: all 300ms ease;
+}
+
+/* --- Dark Theme Variables --- */
+[data-theme="dark"] {
+    background-color: #181a1e;
+  --clr-bg-light: var(--clr-gray-dark); /* Main BG to gray */
+  --clr-sidebar-bg-light: var(--clr-black); /* Sidebar BG to gray */
+  --clr-text-light: var(--clr-purple-light); /* Sidebar text to light purple */
+  --box-shadow: 0 5rem 3rem rgb(163, 161, 247,0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--clr-bg-light);
+  color: var(--clr-text-light);
+  transition: var(--transition);
+}
+
+/* --- Grid Layout --- */
+.dashboard-container {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  background-color: var(--clr-sidebar-bg-light);
+  height: 100vh;
+  transition: var(--transition);
+}
+
+.sidebar h3 {
+  font-weight: 500;
+  padding: 1.6rem 2rem 0.5rem;
+  color: var(--clr-text-light);
+}
+
+.sidebar-menu a {
+  display: flex;
+  color: var(--clr-text-light);
+  gap: 1rem;
+  align-items: center;
+  height: 3.7rem;
+  position: relative;
+  transition: var(--transition);
+  padding-left: 2rem;
+  border-radius: 1rem;
+}
+
+.sidebar-menu a:hover, .sidebar-menu a.active {
+  background: var(--clr-light);
+  color: var(--clr-primary);
+}
+
+/* --- Main Content --- */
+.content {
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.theme-toggler {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--clr-light);
+  height: 1.6rem;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.theme-toggler span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggler span.active {
+  background: var(--clr-primary);
+  color: white;
+  border-radius: 0.4rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--clr-white); /* Light mode default */
+  color: var(--clr-text-light); /* Light mode default */
+  padding: var(--card-padding);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+/* --- Card styling for dark theme --- */
+[data-theme="dark"] .card {
+  background: rgb(74, 70, 70); /* Card BG to black */
+  color: var(--clr-purple-tint); /* Card text to purple tint */
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.data-visualization {
+  grid-column: 1 / -1;
+  min-height: 200px;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    width: 14rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem rgba(132, 139, 200, 0.18);
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+}
+
+/* --- Header styling for dark theme (NEW) --- */
+[data-theme="dark"] .header h1 {
+  color: var(--clr-purple-tint); /* Text color with purple tint */
+}
