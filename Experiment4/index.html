@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive SVG Drawing Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Interactive SVG Drawing Tool</h2>
+
+<!-- Controls -->
+<div id="controls">
+    <label>Color:
+        <input type="color" id="colorPicker" value="#007bff">
+    </label>
+
+    <label>Size:
+        <input type="range" id="sizeRange" min="5" max="50" value="10">
+    </label>
+
+    <button onclick="undo()">Undo</button>
+    <button id="clearBtn" onclick="clearAll()">Clear All</button>
+</div>
+
+<!-- SVG Canvas -->
+<svg id="canvas" width="700" height="450"></svg>
+
+<script src="script.js"></script>
+</body>
+</html>
