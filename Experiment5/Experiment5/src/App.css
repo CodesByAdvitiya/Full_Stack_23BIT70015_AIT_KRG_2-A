@@ -1,0 +1,141 @@
+/* ---------- Global Styles ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- Main Container ---------- */
+.container {
+  width: 650px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* ---------- Form Styling ---------- */
+.book-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.book-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.book-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+.book-form button {
+  padding: 10px 18px;
+  font-size: 15px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-form button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* ---------- Search Bar ---------- */
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1.5px solid #d0d0d0;
+  font-size: 15px;
+}
+
+.search-bar:focus {
+  border-color: #4c8cff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+/* ---------- Book List ---------- */
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-list li {
+  background: #f8f9fa;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e3e3e3;
+  transition: 0.2s;
+}
+
+.book-list li:hover {
+  background: #eef3ff;
+  border-color: #b5cffd;
+}
+
+/* ---------- Buttons (Edit & Delete) ---------- */
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background: #ffc107;
+}
+
+.edit-btn:hover {
+  background: #e0a800;
+}
+
+.delete-btn {
+  background: #dc3545;
+}
+
+.delete-btn:hover {
+  background: #b52a35;
+}
+
+/* ---------- Small Animations ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
