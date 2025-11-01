@@ -1,0 +1,15 @@
+<% include("partials/header") %>
+
+<a href="/students/create" class="btn">Add Student</a>
+
+<h3>All Students</h3>
+
+<% students.forEach(student => { %>
+  <div class="card">
+    <h4><%= student.name %></h4>
+    <p>Roll No: <%= student.rollNo %></p>
+    <a href="/students/delete/<%= student._id %>" class="delete-btn">Delete</a>
+  </div>
+<% }); %>
+
+<% include("partials/footer") %>
