@@ -1,0 +1,102 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(135deg, #fefcea, #e6f3ff);
+    color: #333;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bank-interface {
+    display: grid;
+    gap: 1rem;
+    max-width: 400px;
+    width: 90%;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin: 10px;
+    color: #0056b3;
+}
+
+#balance {
+    color: #f1c40f;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 2px solid #0056b3;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:first-child {
+    background: #28a745;
+}
+
+button:first-child:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+button:last-child {
+    background: #dc3545;
+}
+
+button:last-child:hover {
+    background: #a71d2a;
+    transform: scale(1.05);
+}
+
+#message {
+    color: red;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    .bank-interface {
+        padding: 1.5rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
