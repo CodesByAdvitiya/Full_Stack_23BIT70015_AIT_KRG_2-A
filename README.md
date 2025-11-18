@@ -1,1 +1,0 @@
-# Full_Stack_23BIT70015_AIT_KRG_2-A
